@@ -1,5 +1,6 @@
 RED = '\u001b[41m'
 WHITE = '\u001b[47m'
+BLACK = '\u001b[40m'
 END = '\u001b[0m'
 
 #task1
@@ -12,6 +13,22 @@ def flag():
 flag()
 
 #task2
+def uzor(h,l):
+    diameter=9
+    for t in range(h):
+        radius = (diameter/2)-0.5
+        for i in range(diameter):
+            st=f''
+            for j in range(diameter):
+                x = i - radius
+                y = j - radius
+                if radius**2-4<= x**2 + y**2 <= radius**2+2:
+                    st+=f'{BLACK}{" "*(2)}{END}'
+                else:
+                    st+=f'{WHITE}{" "*(2)}{END}'
+            print(st*(2*l))
+uzor(5,3)
+
 '''plot_list = [[0 for i in range(10)] for i in range(10)]
 result = [0 for i in range(10)]
 
