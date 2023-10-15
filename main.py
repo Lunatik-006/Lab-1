@@ -27,7 +27,20 @@ def uzor(h,l):
                 else:
                     st+=f'{WHITE}{" "*(2)}{END}'
             print(st*(2*l))
-uzor(5,3)
+uzor(1,2)
+
+#task3
+def gr():
+    for x in range(9,-2,-1):
+        if x==9: print(f'{x}{" "}{"^"}{"  "}{"-"*(x*2-2)}{"//"}{"-"*(16-x*2)}')
+        if 8>=x>=1: print(f'{x}{" "}{"|"}{"  "}{"-"*(x*2-2)}{"//"}{"-"*(18-x*2)}')
+        if x==0: print(f'{"  "}{"|"}{"  "}{"-"*17}{">"}')
+        if x==-1: 
+            st=f'{0}{"   "}'
+            for i in range(1,10):
+                st+=f'{3*i}{" "}'
+            print(st)
+gr()
 
 '''plot_list = [[0 for i in range(10)] for i in range(10)]
 result = [0 for i in range(10)]
@@ -71,5 +84,4 @@ list = []
 for number in file:
     list.append(float(number))
 file.close()
-print(list)
-print(RED+'YEAH!'+END)'''
+print(list)'''
