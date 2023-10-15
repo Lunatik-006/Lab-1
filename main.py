@@ -1,16 +1,18 @@
 RED = '\u001b[41m'
-BLUE = '\u001b[44m'
 WHITE = '\u001b[47m'
 END = '\u001b[0m'
 
-for i in range(6):
-    if i < 3:
-        print(f'{BLUE}{"  " * (2 * i + 2)}{WHITE}{"  " * (14 - 2 * i)}{END}')
-    else:
-        print(f'{BLUE}{"  " * (12 - 2 * i)}{RED}{"  " * (4 + 2 * i)}{END}')
+#task1
+def flag():
+    for i in range(8):
+        if 3<=i<=4: t=8
+        elif i==0 or i==7: t=0
+        else: t=2
+        print(f'{RED}{"  "*((14-t)//2)}{END}{WHITE}{"  "*t}{END}{RED}{"  "*((14-t)//2)}{END}')
+flag()
 
-
-plot_list = [[0 for i in range(10)] for i in range(10)]
+#task2
+'''plot_list = [[0 for i in range(10)] for i in range(10)]
 result = [0 for i in range(10)]
 
 for i in range(10):
@@ -53,4 +55,4 @@ for number in file:
     list.append(float(number))
 file.close()
 print(list)
-print(RED+'YEAH!'+END)
+print(RED+'YEAH!'+END)'''
